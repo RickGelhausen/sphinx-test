@@ -26,7 +26,7 @@ git config --global user.name "${GITHUB_ACTOR}"
 git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 
 mkdir -p "docs/"
-mv "_build/html/"* "docs/"
+rsync -av --delete "_build/html/"* "docs/"
 
 git add docs/
 
