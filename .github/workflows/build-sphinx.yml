@@ -7,8 +7,15 @@ env:
 
 on:
   push:
+    branches:
+      - main
     paths:
-    	- src/**
+      - 'src/**'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'src/**'
 
 jobs:
   build_sphinx_job:
