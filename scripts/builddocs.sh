@@ -30,8 +30,9 @@ pushd "${mainroot}"
 
 git clone "https://token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "${mainroot}"
 
+ls -la
 mkdir docs/
-cp -r "_build/html/" "${mainroot}/docs/"
+mv "_build/html/" "${mainroot}/docs/"
 
 git add docs/
 
