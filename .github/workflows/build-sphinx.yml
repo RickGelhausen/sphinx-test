@@ -1,0 +1,31 @@
+name: build-sphinx-to-gh-pages
+
+env:
+  GITHUB_ACTOR: RickGelhausen
+  GITHUB_REPOSITORY: RickGelhausen/sphinx-test
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+on:
+  push:
+    paths:
+    	- src/**
+
+jobs:
+  build_sphinx_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get prerequisites and clone repository
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -x
+          sudo apt-get update
+          sudo apt-get install -y git
+          git clone "https://token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" .
+        shell: bash
+
+      - name: Run build script for Sphinx-based GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: "scripts/builddocs.sh"
+        shell: bash
