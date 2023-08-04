@@ -33,7 +33,7 @@ git clone "https://token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "$
 mkdir docs/
 
 pushd "${GITHUB_WORKSPACE}"
-mv "_build/html/" "${mainroot}/docs/"
+mv "_build/html/*" "${mainroot}/docs/"
 popd
 
 git add docs/
