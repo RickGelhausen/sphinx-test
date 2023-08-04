@@ -30,8 +30,6 @@ pushd "${mainroot}"
 
 git clone "https://token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "${mainroot}"
 
-mkdir docs/
-
 pushd "${GITHUB_WORKSPACE}"
 mv "_build/html/"* "${mainroot}/docs/"
 popd
