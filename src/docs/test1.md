@@ -1,6 +1,7 @@
 # Welcome
 
-## Test heading
+(test-info)=
+## Interesting Information
 
 Text
 
