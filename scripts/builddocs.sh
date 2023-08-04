@@ -25,14 +25,8 @@ make html
 git config --global user.name "${GITHUB_ACTOR}"
 git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 
-mainroot=`mktemp -d`
-pushd "${mainroot}"
-
-git clone "https://token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "${mainroot}"
-
-pushd "${GITHUB_WORKSPACE}"
-mv "_build/html/"* "${mainroot}/docs/"
-popd
+mkdir -p "docs/"
+mv "_build/html/"* "docs/"
 
 git add docs/
 
@@ -40,9 +34,6 @@ msg="Updating Documentation for commit ${GITHUB_SHA} made on `date -d"@${SOURCE_
 git commit -m "${msg}"
 
 git push https://token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git main
-
-# return to main repo sandbox root
-popd
 
 # exit cleanly
 exit 0
