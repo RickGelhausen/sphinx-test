@@ -31,9 +31,7 @@ pushd "${mainroot}"
 git clone "https://token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "${mainroot}"
 
 mkdir docs/
-cp -r "build/html/" "${mainroot}/docs/"
-
-touch docs/.nojekyll
+cp -r "_build/html/" "${mainroot}/docs/"
 
 git add docs/
 
