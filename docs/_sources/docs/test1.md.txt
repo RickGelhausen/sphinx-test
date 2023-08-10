@@ -5,6 +5,24 @@
 
 Text
 
+```{image} ../assets/images/logo.png
+:alt: Logo
+:width: 500px
+:align: center
+```
+
+```{image} logo.png
+:alt: Logo
+:width: 500px
+:align: center
+```
+
+![test] ../assets/images/logo.png
+
+![test] logo.png
+
+<img src="../assets/images/logo.png" alt="logo" class="align-center" width="500px">
+
 Text2
 
 Text3
