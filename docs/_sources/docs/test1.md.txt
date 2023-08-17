@@ -42,3 +42,10 @@ Text9
 Text10
 
 Text11
+
+Here's a statement that needs backing up {cite}`sample2023`.
+
+
+## References
+
+```{bibliography}
