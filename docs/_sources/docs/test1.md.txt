@@ -17,9 +17,9 @@ Text
 :align: center
 ```
 
-![test] ../assets/images/logo.png
+![test](../assets/images/logo.png)
 
-![test] logo.png
+![test](logo.png)
 
 <img src="../assets/images/logo.png" alt="logo" class="align-center" width="500px">
 
