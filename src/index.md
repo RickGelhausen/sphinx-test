@@ -14,3 +14,8 @@ docs/test2.md
 :caption: Documentation
 docs/test3.md
 ```
+
+```{toctree}
+:caption: References
+docs/references.md
+```
