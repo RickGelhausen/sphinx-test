@@ -1,9 +1,5 @@
 # Documentation
 
 
-Here's a statement that needs backing up {footcite}`sample2023`.
+Here's a statement that needs backing up {cite}`sample2023`.
 
-
-## References
-
-```{footbibliography}

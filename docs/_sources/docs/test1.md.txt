@@ -11,15 +11,8 @@ Text
 :align: center
 ```
 
-```{image} logo.png
-:alt: Logo
-:width: 500px
-:align: center
-```
-
 ![test](../assets/images/logo.png)
 
-![test](logo.png)
 
 <img src="../assets/images/logo.png" alt="logo" class="align-center" width="500px">
 
@@ -43,9 +36,4 @@ Text10
 
 Text11
 
-Here's a statement that needs backing up {footcite}`sample2023`.
-
-
-## References
-
-```{footbibliography}
+Here's a statement that needs backing up {cite}`sample2022`.
